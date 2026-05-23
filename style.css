@@ -493,21 +493,28 @@ footer {
 
 .school-Staff .slide {
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .school-Staff .slide h3 {
   font-size: 1.2rem;
   color: #0d500f;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
 }
 
 .school-Staff .slide p {
   font-size: 0.9rem;
-  color: #47543d;
-  line-height: 1.6;
-  margin-bottom: 0.5rem;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 0;
+  letter-spacing: 0.2px;
+  font-weight: 500;
 }
 
 @media (max-width: 768px) {
