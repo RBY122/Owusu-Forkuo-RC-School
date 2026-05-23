@@ -470,10 +470,44 @@ footer {
 
 .school-Staff .slideshow-container {
   margin-bottom: 2rem;
+  background: #ffffff;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
 }
 
 .school-gallery .slideshow-container {
   margin-top: 1rem;
+}
+
+/* Staff Image Styles */
+.staff {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 1.5rem;
+  display: block;
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.school-Staff .slide {
+  text-align: center;
+  padding: 1rem;
+}
+
+.school-Staff .slide h3 {
+  font-size: 1.4rem;
+  color: #0d500f;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.school-Staff .slide p {
+  font-size: 0.95rem;
+  color: #47543d;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 @media (max-width: 1024px) {
