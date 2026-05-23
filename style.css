@@ -483,7 +483,7 @@ footer {
 /* Staff Image Styles */
 .staff {
   width: 100%;
-  max-width: 280px;
+  max-width: 200px;
   height: auto;
   margin: 0 auto 1.5rem;
   display: block;
@@ -497,17 +497,31 @@ footer {
 }
 
 .school-Staff .slide h3 {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #0d500f;
   margin-bottom: 0.5rem;
   font-weight: 600;
 }
 
 .school-Staff .slide p {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #47543d;
   line-height: 1.6;
   margin-bottom: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .staff {
+    max-width: 240px;
+  }
+
+  .school-Staff .slide h3 {
+    font-size: 1.3rem;
+  }
+
+  .school-Staff .slide p {
+    font-size: 0.95rem;
+  }
 }
 
 @media (max-width: 1024px) {
