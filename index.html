@@ -319,10 +319,14 @@
 
 
   <script>
+    // Smooth scrolling for internal anchors and close nav on selection
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        const nav = document.querySelector('.nav-links');
+        if (nav && nav.classList.contains('active')) nav.classList.remove('active');
       });
     });
 
@@ -331,6 +335,13 @@
 
     menuToggle.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+    });
+
+    // Close mobile menu when any nav link is clicked (also handles external links)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('active')) navLinks.classList.remove('active');
+      });
     });
 
     let slideIndex = [1, 1];
