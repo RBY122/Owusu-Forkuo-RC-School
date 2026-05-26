@@ -68,6 +68,54 @@
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
     }
+
+    .hero-panel-card {
+      background: rgba(255, 255, 255, 0.95);
+      -webkit-backdrop-filter: blur();
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      padding: 2.5rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .school-Staff .slide {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .staff {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      margin: 0 auto 1.5rem;
+      display: block;
+      transition: var(--transition);
+    }
+
+    .staff:hover {
+      transform: scale(1.05) translateY(-5px);
+      border-color: var(--secondary-color);
+    }
+
+    .dot {
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .dot:hover {
+      transform: scale(1.2);
+    }
+  </style>
+  <style>
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure it stays on top of other content */
+    }
   </style>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -330,6 +378,18 @@
             <span class="dot" onclick="currentSlide(1, 1)" aria-label="Go to slide 1"></span>
             <span class="dot" onclick="currentSlide(2, 1)" aria-label="Go to slide 2"></span>
             <span class="dot" onclick="currentSlide(3, 1)" aria-label="Go to slide 3"></span>
+            <span class="dot" onclick="currentSlide(4, 1)" aria-label="Go to slide 4"></span>
+            <span class="dot" onclick="currentSlide(5, 1)" aria-label="Go to slide 5"></span>
+            <span class="dot" onclick="currentSlide(6, 1)" aria-label="Go to slide 6"></span>
+            <span class="dot" onclick="currentSlide(7, 1)" aria-label="Go to slide 7"></span>
+            <span class="dot" onclick="currentSlide(8, 1)" aria-label="Go to slide 8"></span>
+            <span class="dot" onclick="currentSlide(9, 1)" aria-label="Go to slide 9"></span>
+            <span class="dot" onclick="currentSlide(10, 1)" aria-label="Go to slide 10"></span>
+            <span class="dot" onclick="currentSlide(11, 1)" aria-label="Go to slide 11"></span>
+            <span class="dot" onclick="currentSlide(12, 1)" aria-label="Go to slide 12"></span>
+            <span class="dot" onclick="currentSlide(13, 1)" aria-label="Go to slide 13"></span>
+            <span class="dot" onclick="currentSlide(14, 1)" aria-label="Go to slide 14"></span>
+            <span class="dot" onclick="currentSlide(15, 1)" aria-label="Go to slide 15"></span>
           </div>
         </div>
 </section>
@@ -505,7 +565,7 @@
         dots[i].className = dots[i].className.replace(' active', '');
       }
       x[slideIndex[no]-1].style.display = 'block';
-      dots[slideIndex[no]-1].className += ' active';
+      if (dots[slideIndex[no]-1]) dots[slideIndex[no]-1].className += ' active';
     }
 
     let autoSlideEnv = setInterval(() => {
