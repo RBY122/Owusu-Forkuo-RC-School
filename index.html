@@ -9,114 +9,6 @@
   <link rel="shortcut icon" href="images/ceughana-logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --primary-color: #0056b3;
-      --secondary-color: #ffd700;
-      --text-dark: #333;
-      --transition: all 0.3s ease;
-    }
-    
-    .nav-links a {
-      position: relative;
-      transition: var(--transition);
-    }
-    
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: var(--secondary-color);
-      transition: var(--transition);
-    }
-    
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .feature-card, .info-card, .event-card, .admission-card {
-      transition: var(--transition);
-      border: 1px solid rgba(0,0,0,0.05);
-    }
-
-    .feature-card:hover, .info-card:hover, .event-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-      background: #fff;
-    }
-
-    .btn {
-      transition: var(--transition) !important;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 600;
-    }
-
-    .primary-btn:hover {
-      filter: brightness(1.1);
-      transform: scale(1.05);
-    }
-
-    .hero-content {
-      animation: fadeInUp 1s ease-out;
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    .hero-panel-card {
-      background: rgba(255, 255, 255, 0.95);
-      -webkit-backdrop-filter: blur();
-      backdrop-filter: blur(10px);
-      border-radius: 15px;
-      padding: 2.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-      border: 1px solid rgba(255, 255, 255, 0.3);
-    }
-
-    .school-Staff .slide {
-      text-align: center;
-      padding: 2rem;
-    }
-
-    .staff {
-      width: 180px;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 50%;
-      border: 5px solid #fff;
-      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-      margin: 0 auto 1.5rem;
-      display: block;
-      transition: var(--transition);
-    }
-
-    .staff:hover {
-      transform: scale(1.05) translateY(-5px);
-      border-color: var(--secondary-color);
-    }
-
-    .dot {
-      transition: background-color 0.3s ease, transform 0.2s ease;
-    }
-
-    .dot:hover {
-      transform: scale(1.2);
-    }
-  </style>
-  <style>
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 1000; /* Ensure it stays on top of other content */
-    }
-  </style>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
@@ -268,8 +160,8 @@
               <div class="slide fade">
                 <img src="images/env (13).jpg" alt="School compound landscaping" loading="lazy">
               </div>
-              <a class="prev" onclick="plusSlides(-1, 0)" aria-label="Previous slide">&#10094;</a>
-              <a class="next" onclick="plusSlides(1, 0)" aria-label="Next slide">&#10095;</a>
+              <a class="prev" onclick="plusSlides(-1, 0)" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+              <a class="next" onclick="plusSlides(1, 0)" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
             </div>
             <div class="slideshow-dots" id="env-dots">
               <span class="dot" onclick="currentSlide(1, 0)" aria-label="Go to slide 1"></span>
@@ -296,83 +188,82 @@
         <div class="school-Staff">
           <div class="slideshow-container" id="staff-slideshow">
             <div class="slide fade">
-              <img src="images/mirinda.jpg" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/mirinda.jpeg" alt="Teaching staff" class="staff" loading="lazy">
               <h3>Mirinda Owusu</h3>
               <p>Assistant Headmistress/primary 3 teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/stela.jpg" alt="Teaching staff" class="staff" loading="lazy">
-              <h3>Stela Sakyi</h3>
+              <img src="images/stella.jpeg" alt="Teaching staff" class="staff" loading="lazy">
+              <h3>Stella 	Kumea Sakyi</h3>
               <p>KG 2 teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/kwame.jpeg" alt="Teaching staff" class="staff" loading="lazy">
+              <h3>Kwame Gyamfi</h3>
+              <p>Primary 5</p>
+            </div>
+            <div class="slide fade">
+              <img src="images/julie.jpeg" alt="Teaching staff" class="staff" loading="lazy">
+              <h3>Juliana Mayina</h3>
+              <p>Headmistress(Primary)</p>
+            </div>
+            <div class="slide fade">
+              <img src="images/frimpong.jpeg" alt="Teaching staff" class="staff" loading="lazy">
+              <h3>John Doe</h3>
+              <p>Primary 6</p>
+            </div>
+            <div class="slide fade">
+              <img src="images/rich.jpeg" alt="Teaching staff" class="staff" loading="lazy">
+              <h3>Richard Boakye Yiadom</h3>
+              <p>National Service Personal(Computing)</p>
+            </div>
+            <div class="slide fade">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
+              <img src="images/" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
-            <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
-              <h3>John Doe</h3>
-              <p>Mathematics teacher</p>
-            </div>
-            <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
-              <h3>John Doe</h3>
-              <p>Mathematics teacher</p>
-            </div>
-            <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
-              <h3>John Doe</h3>
-              <p>Mathematics teacher</p>
-            </div>
-            <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
-              <h3>John Doe</h3>
-              <p>Mathematics teacher</p>
-            </div>
-            </div>
-            <a class="prev" onclick="plusSlides(-1, 1)" aria-label="Previous slide">&#10094;</a>
-            <a class="next" onclick="plusSlides(1, 1)" aria-label="Next slide">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1, 1)" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></a>
+            <a class="next" onclick="plusSlides(1, 1)" aria-label="Next slide"><i class="fas fa-chevron-right"></i></a>
           </div>
           <div class="slideshow-dots" id="staff-dots">
             <span class="dot" onclick="currentSlide(1, 1)" aria-label="Go to slide 1"></span>
@@ -556,15 +447,31 @@
       let dotsId = no === 0 ? 'env-dots' : 'staff-dots';
       let x = document.querySelectorAll('#' + slideshowId + ' .slide');
       let dots = document.querySelectorAll('#' + dotsId + ' .dot');
+      
+      if (x.length === 0) return;
+      
       if (n > x.length) {slideIndex[no] = 1}
       if (n < 1) {slideIndex[no] = x.length}
+      
       for (i = 0; i < x.length; i++) {
         x[i].style.display = 'none';
       }
+
+      if (no === 0) {
+        // Environment Slideshow (1 at a time)
+        x[slideIndex[no]-1].style.display = 'block';
+      } else {
+        // Staff Slideshow (4 at a time on desktop)
+        let itemsToShow = window.innerWidth > 1024 ? 4 : (window.innerWidth > 768 ? 2 : 1);
+        for (i = 0; i < itemsToShow; i++) {
+          let idx = (slideIndex[no] - 1 + i) % x.length;
+          if (x[idx]) x[idx].style.display = 'block';
+        }
+      }
+
       for (i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(' active', '');
       }
-      x[slideIndex[no]-1].style.display = 'block';
       if (dots[slideIndex[no]-1]) dots[slideIndex[no]-1].className += ' active';
     }
 
@@ -574,13 +481,28 @@
 
     let autoSlideStaff = setInterval(() => {
       plusSlides(1, 1);
-    }, 4000);
+    }, 5000);
+
+    window.addEventListener('resize', () => {
+      showSlides(slideIndex[0], 0);
+      showSlides(slideIndex[1], 1);
+    });
 
     const slideshows = document.querySelectorAll('.slideshow-container');
     slideshows.forEach(slideshow => {
       slideshow.addEventListener('mouseenter', () => {
         if (slideshow.id === 'env-slideshow') clearInterval(autoSlideEnv);
         if (slideshow.id === 'staff-slideshow') clearInterval(autoSlideStaff);
+      });
+      slideshow.addEventListener('mouseleave', () => {
+        if (slideshow.id === 'env-slideshow') {
+          clearInterval(autoSlideEnv);
+          autoSlideEnv = setInterval(() => plusSlides(1, 0), 3000);
+        }
+        if (slideshow.id === 'staff-slideshow') {
+          clearInterval(autoSlideStaff);
+          autoSlideStaff = setInterval(() => plusSlides(1, 1), 5000);
+        }
       });
     });
   </script>
