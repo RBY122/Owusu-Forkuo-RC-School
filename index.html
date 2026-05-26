@@ -9,6 +9,67 @@
   <link rel="shortcut icon" href="images/ceughana-logo.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #0056b3;
+      --secondary-color: #ffd700;
+      --text-dark: #333;
+      --transition: all 0.3s ease;
+    }
+    
+    .nav-links a {
+      position: relative;
+      transition: var(--transition);
+    }
+    
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--secondary-color);
+      transition: var(--transition);
+    }
+    
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .feature-card, .info-card, .event-card, .admission-card {
+      transition: var(--transition);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .feature-card:hover, .info-card:hover, .event-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+      background: #fff;
+    }
+
+    .btn {
+      transition: var(--transition) !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+    }
+
+    .primary-btn:hover {
+      filter: brightness(1.1);
+      transform: scale(1.05);
+    }
+
+    .hero-content {
+      animation: fadeInUp 1s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+  <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
   <nav aria-label="Main Navigation">
@@ -121,43 +182,43 @@
           <div class="school-gallery">
             <div class="slideshow-container" id="env-slideshow">
               <div class="slide fade">
-                <img src="images/env (1).jpg" alt="School entrance and main building">
+                <img src="images/env (1).jpg" alt="School entrance and main building" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (2).jpg" alt="Classroom block view">
+                <img src="images/env (2).jpg" alt="Classroom block view" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (3).jpg" alt="Students in playground">
+                <img src="images/env (3).jpg" alt="Students in playground" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (4).jpg" alt="School library corner">
+                <img src="images/env (4).jpg" alt="School library corner" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (5).jpg" alt="Computer lab facilities">
+                <img src="images/env (5).jpg" alt="Computer lab facilities" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (6).jpg" alt="School dining area">
+                <img src="images/env (6).jpg" alt="School dining area" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (7).jpg" alt="Assembly ground">
+                <img src="images/env (7).jpg" alt="Assembly ground" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (8).jpg" alt="School garden project">
+                <img src="images/env (8).jpg" alt="School garden project" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (9).jpg" alt="Art and craft room">
+                <img src="images/env (9).jpg" alt="Art and craft room" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (10).jpg" alt="Science lab setup">
+                <img src="images/env (10).jpg" alt="Science lab setup" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (11).jpg" alt="School compound view">
+                <img src="images/env (11).jpg" alt="School compound view" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (12).jpg" alt="Student reading area">
+                <img src="images/env (12).jpg" alt="Student reading area" loading="lazy">
               </div>
               <div class="slide fade">
-                <img src="images/env (13).jpg" alt="School compound landscaping">
+                <img src="images/env (13).jpg" alt="School compound landscaping" loading="lazy">
               </div>
               <a class="prev" onclick="plusSlides(-1, 0)" aria-label="Previous slide">&#10094;</a>
               <a class="next" onclick="plusSlides(1, 0)" aria-label="Next slide">&#10095;</a>
@@ -187,17 +248,17 @@
         <div class="school-Staff">
           <div class="slideshow-container" id="staff-slideshow">
             <div class="slide fade">
-              <img src="images/mirinda.jpg" alt="Teaching staff" class="staff">
+              <img src="images/mirinda.jpg" alt="Teaching staff" class="staff" loading="lazy">
               <h3>Mirinda Owusu</h3>
               <p>Assistant Headmistress/primary 3 teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/stela.jpg" alt="Teaching staff" class="staff">
+              <img src="images/stela.jpg" alt="Teaching staff" class="staff" loading="lazy">
               <h3>Stela Sakyi</h3>
               <p>KG 2 teacher</p>
             </div>
             <div class="slide fade">
-              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff">
+              <img src="images/ceughana-logo.png" alt="Teaching staff" class="staff" loading="lazy">
               <h3>John Doe</h3>
               <p>Mathematics teacher</p>
             </div>
