@@ -591,7 +591,7 @@
     const envCarousel = setupCarousel('env-slideshow', 'env-dots', 4000, false);
     const staffCarousel = setupCarousel('staff-slideshow', 'staff-dots', 5000, true);
 
-    // FAQ Accordion Logic
+    // FAQ Accordion Logic: smooth toggle, single-open, limited answer height with scroll
     document.querySelectorAll('.faq-question').forEach(button => {
       button.addEventListener('click', () => {
         const item = button.parentElement;
@@ -602,17 +602,36 @@
         document.querySelectorAll('.faq-item').forEach(otherItem => {
           if (otherItem !== item) {
             otherItem.classList.remove('active');
-            otherItem.querySelector('.faq-answer').style.maxHeight = null;
+            const otherAnswer = otherItem.querySelector('.faq-answer');
+            if (otherAnswer) {
+              otherAnswer.style.maxHeight = null;
+              otherAnswer.style.overflowY = 'hidden';
+            }
           }
         });
 
-        // Toggle current item
+        if (!answer) return;
+
+        // Max height cap for answer panels (keeps answers compact and square-like)
+        const cap = 300; // px
+
         if (isOpen) {
+          // collapse
           item.classList.remove('active');
           answer.style.maxHeight = null;
+          answer.style.overflowY = 'hidden';
+          button.setAttribute('aria-expanded', 'false');
         } else {
+          // expand
           item.classList.add('active');
-          answer.style.maxHeight = answer.scrollHeight + 'px';
+          const fullHeight = answer.scrollHeight;
+          const openHeight = Math.min(fullHeight, cap);
+          answer.style.maxHeight = openHeight + 'px';
+          // make scrollable if content exceeds cap
+          answer.style.overflowY = (fullHeight > cap) ? 'auto' : 'hidden';
+          button.setAttribute('aria-expanded', 'true');
+          // If collapsed because of cap, ensure internal content starts at top
+          if (fullHeight > cap) answer.scrollTop = 0;
         }
       });
     });
