@@ -903,89 +903,100 @@ footer {
   border-color: var(--secondary-color);
 }
 
-/* Staff Slider & Card Upgrades */
+/* Staff Slideshow Styling */
 .school-Staff {
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 #staff-slideshow {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  overflow: visible;
-  background: transparent;
-  box-shadow: none;
-  padding: 20px 0;
-  height: auto;
-  aspect-ratio: auto;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--box-shadow-lg);
+  aspect-ratio: 16 / 9.5;
+  border-radius: var(--border-radius-md);
 }
 
 .school-Staff .slide {
-  background: var(--bg-white);
-  margin: 0;
-  padding: 2.5rem 1.5rem;
-  box-shadow: var(--box-shadow-md);
-  border: 1px solid rgba(13, 80, 27, 0.04);
-  transition: var(--transition-bounce);
-  border-radius: var(--border-radius-md);
-  position: relative;
-  display: none; /* Controlled by JS showSlides */
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  opacity: 0;
+  display: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out, transform 0.4s ease;
+  background: transparent;
+  padding: 0;
 }
 
 .school-Staff .slide.show {
   display: flex;
   opacity: 1;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(0);
 }
 
 .school-Staff .slide:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-lg);
-  border-color: rgba(13, 80, 27, 0.1);
+  transform: translateY(-4px);
 }
 
 .staff {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  margin: 0 auto 1.25rem;
+  border-radius: var(--border-radius-md);
   display: block;
-  border: 4px solid rgba(13, 80, 27, 0.08);
-  box-shadow: var(--box-shadow-sm);
+  border: none;
+  box-shadow: none;
   transition: var(--transition-smooth);
 }
 
 .school-Staff .slide:hover .staff {
-  border-color: var(--secondary-color);
-  transform: scale(1.05);
+  transform: scale(1.02);
+}
+
+.school-Staff h3,
+.school-Staff p {
+  position: absolute;
+  left: 24px;
+  right: 24px;
+  color: #ffffff;
+  text-shadow: 0 3px 18px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+  margin: 0;
 }
 
 .school-Staff h3 {
-  color: var(--primary-dark);
-  font-size: 1.15rem;
-  font-weight: 700;
-  margin-bottom: 0.4rem;
+  bottom: 68px;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  line-height: 1.2;
 }
 
 .school-Staff p {
-  color: var(--text-light);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  font-size: 0.78rem;
+  bottom: 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: none;
+  letter-spacing: 0.2px;
+}
+
+.school-Staff .slide::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.45));
+  border-radius: var(--border-radius-md);
+  z-index: 1;
+  pointer-events: none;
 }
 
 .school-Staff .slideshow-container {
-  overflow: visible;
+  overflow: hidden;
   background: transparent;
   box-shadow: none;
-  aspect-ratio: auto;
   margin-bottom: 1rem;
 }
 
@@ -1026,18 +1037,18 @@ footer {
 
 @media (min-width: 1200px) {
   .school-Staff .slideshow-container .prev {
-    left: -50px;
+    left: 20px;
   }
   .school-Staff .slideshow-container .next {
-    right: -50px;
+    right: 20px;
   }
 }
 @media (min-width: 769px) and (max-width: 1199px) {
   .school-Staff .slideshow-container .prev {
-    left: -20px;
+    left: 15px;
   }
   .school-Staff .slideshow-container .next {
-    right: -20px;
+    right: 15px;
   }
 }
 @media (min-width: 1025px) {
@@ -1086,7 +1097,7 @@ footer {
   }
 
   #staff-slideshow {
-    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
   }
 
   .admission-grid {
@@ -1151,8 +1162,7 @@ footer {
   }
 
   #staff-slideshow {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    width: 100%;
   }
 
   .slideshow-container {
